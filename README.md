@@ -62,3 +62,22 @@ Simple, boring, effective.
 - Developers using ChatGPT inside VS Code
 - People who want consistency, not clever prompts
 - Anyone curious about agent-based workflows
+
+## Naming conventions
+
+- One agent per file
+- File name matches agent name
+- Chat name in VS Code should match the agent name exactly
+
+Example:
+File: `react-performance-agent.md`  
+Chat: `React Performance Agent`
+
+## Roadmap
+
+- Add architecture-focused agent
+- Add testing-focused agent
+- Document real-world usage examples
+
+No automation planned.
+This repository focuses on thinking tools, not products.
