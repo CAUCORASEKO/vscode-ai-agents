@@ -51,7 +51,7 @@ Simple, boring, effective.
 
 ## Repository structure
 
-- `agents/` → Agent definitions (copy/paste ready)
+- - `agents/` → React performance, code review, architecture agents
 - `docs/` → How to use and how to design agents
 - `examples/` → Real examples of agent output
 
