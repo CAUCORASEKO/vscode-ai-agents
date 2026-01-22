@@ -1,7 +1,7 @@
 # VS Code AI Agents
 
 This repository shows how to turn ChatGPT into a set of
-**opinionated AI agents inside VS Code**.
+**opinionated, role-based AI agents inside VS Code**.
 
 No plugins.
 No magic.
@@ -11,14 +11,15 @@ Just structure, rules, and consistency.
 
 ## The problem
 
-Most developers use ChatGPT like a chat:
+Most developers use ChatGPT like a general chat:
 
-- Repeating the same context
+- Repeating context
 - Mixing unrelated tasks
 - Getting inconsistent answers
 - Losing rules over time
 
-That does not scale.
+That doesn't scale.
+At least not for serious development work.
 
 ---
 
@@ -34,8 +35,11 @@ An agent is:
 - Project-aware context
 - Opinionated by design
 
-This is the same idea behind tools like Claude Code,
+This mirrors tools like Claude Code,
 applied to **ChatGPT + VS Code**.
+
+The goal is not better answers.
+The goal is consistent answers.
 
 ---
 
@@ -43,7 +47,7 @@ applied to **ChatGPT + VS Code**.
 
 - One VS Code chat per agent
 - First message = agent definition
-- That chat is never reused for other tasks
+- That chat is never reused for other work
 
 Simple, boring, effective.
 
@@ -51,22 +55,22 @@ Simple, boring, effective.
 
 ## Repository structure
 
-- - `agents/` → React performance, code review, architecture agents
-- `docs/` → How to use and how to design agents
-- `examples/` → Real examples of agent output
+- `agents/` → React performance, code review, architecture agents
+- `docs/` → Design principles, agent contract, and usage
+- `examples/` → Examples of real agent output
 
 ---
 
 ## Who this is for
 
-- Developers using ChatGPT inside VS Code
+- Developers using ChatGPT in VS Code
 - People who want consistency, not clever prompts
 - Anyone curious about agent-based workflows
 
 ## Naming conventions
 
 - One agent per file
-- File name matches agent name
+- File name matches the agent name
 - Chat name in VS Code should match the agent name exactly
 
 Example:
@@ -75,9 +79,8 @@ Chat: `React Performance Agent`
 
 ## Roadmap
 
-- Add architecture-focused agent
 - Add testing-focused agent
-- Document real-world usage examples
+- Expand real-world usage examples
 
 No automation planned.
 This repository focuses on thinking tools, not products.
