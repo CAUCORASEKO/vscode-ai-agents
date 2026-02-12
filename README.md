@@ -1,86 +1,189 @@
 # VS Code AI Agents
 
-This repository shows how to turn ChatGPT into a set of
-**opinionated, role-based AI agents inside VS Code**.
+A structured, role-based engineering governance system built on top of ChatGPT inside VS Code.
 
-No plugins.
-No magic.
-Just structure, rules, and consistency.
+No plugins.  
+No automation layer.  
+No black-box magic.
+
+Just explicit rules, contracts, priorities, and disciplined thinking.
 
 ---
 
-## The problem
+# Why this exists
 
-Most developers use ChatGPT like a general chat:
+Most developers use ChatGPT like a general-purpose chat:
 
 - Repeating context
-- Mixing unrelated tasks
-- Getting inconsistent answers
-- Losing rules over time
+- Mixing unrelated problems
+- Receiving inconsistent answers
+- Losing structural rules over time
+- Getting clever suggestions without discipline
 
-That doesn't scale.
-At least not for serious development work.
+That works for small tasks.
 
----
+It does not scale for serious development.
 
-## The idea: agents, not prompts
-
-Instead of prompts, use **agents**.
-
-An agent is:
-
-- One chat = one role
-- Fixed rules
-- Fixed output format
-- Project-aware context
-- Opinionated by design
-
-This mirrors tools like Claude Code,
-applied to **ChatGPT + VS Code**.
-
-The goal is not better answers.
-The goal is consistent answers.
+This repository exists to solve that.
 
 ---
 
-## How this works in practice
+# The core idea: governance, not prompts
 
-- One VS Code chat per agent
-- First message = agent definition
-- That chat is never reused for other work
+Instead of ad-hoc prompting, this system defines:
 
-Simple, boring, effective.
+- Role-based agents
+- Fixed output contracts
+- Severity discipline
+- Escalation hierarchy
+- Global priorities
+- Shared project context
+
+Each agent operates within defined authority boundaries.
+
+The goal is not “better answers”.
+
+The goal is:
+
+- Consistent decisions
+- Reduced cognitive load
+- Controlled structural evolution
+- Long-term maintainability
 
 ---
 
-## Repository structure
+# What this system provides
 
-- `agents/` → React performance, code review, architecture agents
-- `docs/` → Design principles, agent contract, and usage
-- `examples/` → Examples of real agent output
+## 1. Specialized agents
+
+- Architecture Agent
+- API Design Agent
+- Data Modeling Agent
+- Feature Design Agent
+- Technical Debt Agent
+- UI Implementation Agent
+
+Each agent:
+
+- Owns a specific decision domain
+- Follows strict output contracts
+- Classifies severity consistently
+- Escalates when structural integrity is threatened
 
 ---
 
-## Who this is for
+## 2. Governance documents
 
-- Developers using ChatGPT in VS Code
-- People who want consistency, not clever prompts
-- Anyone curious about agent-based workflows
+The `docs/` directory defines:
 
-## Naming conventions
+- Global priorities
+- Severity guidelines
+- Output contracts
+- Agent hierarchy and escalation rules
+- Example calibrated use cases
 
-- One agent per file
-- File name matches the agent name
-- Chat name in VS Code should match the agent name exactly
+This ensures:
 
-Example:
-File: `react-performance-agent.md`  
-Chat: `React Performance Agent`
+- Agents remain consistent
+- Recommendations are comparable
+- Structural discipline is enforced
+- Drift is detected early
 
-## Roadmap
+---
 
-- Add testing-focused agent
-- Expand real-world usage examples
+## 3. Project context
 
-No automation planned.
-This repository focuses on thinking tools, not products.
+`project-context.md` defines:
+
+- Stack and technologies
+- Architectural style
+- Naming conventions
+- System invariants
+- Explicit non-goals
+
+Agents evaluate decisions against this baseline.
+
+If recommendations contradict the documented context, escalation is required.
+
+---
+
+# How this works in practice
+
+- One VS Code chat per agent.
+- The first message defines the agent.
+- That chat is never reused for other purposes.
+- Structural changes trigger cross-agent review.
+
+This mirrors structured engineering review, not casual conversation.
+
+---
+
+# Who this is for
+
+- Engineers working on evolving systems
+- Developers building long-lived products
+- Teams who care about structural integrity
+- People who prefer boring consistency over clever chaos
+
+This is not:
+
+- A no-code automation system
+- A productivity gimmick
+- A replacement for architectural thinking
+
+It is a structured augmentation tool.
+
+---
+
+# Philosophy
+
+This system is built around one principle:
+
+> Reduce long-term change cost while preserving structural integrity.
+
+Every document and agent enforces that principle.
+
+---
+
+# Repository structure
+
+```
+agents/              → Domain-specific decision agents
+docs/                → Governance framework and contracts
+project-context.md   → Stable baseline assumptions
+examples/            → Calibrated usage examples
+```
+
+---
+
+# Design constraints
+
+- No hidden automation
+- No runtime dependencies
+- No external orchestration layer
+- No magic state persistence
+
+All discipline is explicit.
+
+---
+
+# Roadmap
+
+Future expansions may include:
+
+- Testing Agent
+- Security Review Agent
+- Performance Profiling Agent
+- Multi-agent simulation scenarios
+
+The focus remains structural thinking, not tooling complexity.
+
+---
+
+# Final note
+
+This repository is not about AI.
+
+It is about disciplined engineering decision-making.
+
+AI is only the execution medium.
